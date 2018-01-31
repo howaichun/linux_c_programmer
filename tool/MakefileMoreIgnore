@@ -1,0 +1,10 @@
+#more ignore makefile
+# 表示所有的.o文件都是依赖与相应的.c文件， 例如 mytool.o 依赖mytool.c
+#..c.o:
+#target:components
+#	rule
+#gcc -c $<
+main:main.o mytool1.o mytool2.o
+	gcc -o $@ $^
+..c.o:
+	gcc -c $<
